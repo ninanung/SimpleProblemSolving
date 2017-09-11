@@ -3,7 +3,7 @@ function evenFibonacciNumbers () {
 	var second = 2;
 	var result = 0;
 	var sumOfEven = 2;
-	while(result < 2000000) {
+	while(result <= 2000000) {
 		result = first + second;
 		first = second;
 		second = result;
