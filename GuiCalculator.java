@@ -36,7 +36,6 @@ class PostFixConverter {
         }
         clearStack();
     }
-
     private void inputToStack(char input) {
         if(stack.isEmpty() || input == '(')
             stack.addLast(input);
@@ -59,7 +58,6 @@ class PostFixConverter {
             }
         }
     }
-
     private int getPrecedence(char op) {
          if (op == '+' || op == '-')
                 return 1;
@@ -69,7 +67,6 @@ class PostFixConverter {
                 return 3;
          else return 0;
     }
-
     private void clearStack() {
         while(!stack.isEmpty()) {
             postfix.add(stack.removeLast().toString());
@@ -86,7 +83,6 @@ class PostFixConverter {
         return postfix;
     }
 }
-
 class PostFixCalculator {
     private List<String> expression = new ArrayList<String>();
     private Deque<Double> stack = new ArrayDeque<Double>();
@@ -126,7 +122,6 @@ class PostFixCalculator {
         return big;
     }
 }
-
 class homeworkgui extends JFrame {
 	public String[] buttons = {"1", "2", "3", "*", "/", "4", "5", "6", "+", "-", "7", "8", "9", "(", ")", ".", "0", "BS", "=", "Clear"};
 	public String[] number = {"1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "+", "-", "*", "/", ".", "(", ")"};
@@ -182,7 +177,6 @@ class homeworkgui extends JFrame {
 			}
 		}
 	}
-	
 	public static void main(String[] args) {
 		new homeworkgui();
 	}
