@@ -34,7 +34,15 @@ def biggestLeftRight(xy):
     return xxxx
 
 def biggestDiagonally(xy):
-    return None
+    xxxx = 0
+    for numX in range(0, len(xy[0])-3):
+        for numY in range(0, len(xy)-3):
+            if xxxx is 0:
+                xxxx = xy[numY][numX] * xy[numY+1][numX+1] * xy[numY+2][numX+2] * xy[numY+3][numX+3]
+            all = xy[numY][numX] * xy[numY+1][numX+1] * xy[numY+2][numX+2] * xy[numY+3][numX+3]
+            if xxxx < all:
+                xxxx = all
+    return xxxx
 
 grid = open('grid.txt', 'rt')
 gridLines = grid.readlines()
@@ -42,3 +50,4 @@ grid.close()
 xy = getLinesReturnArray(gridLines)
 print(biggestUpDown(xy))
 print(biggestLeftRight(xy))
+print(biggestDiagonally(xy))
